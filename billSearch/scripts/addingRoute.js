@@ -31,6 +31,7 @@ var houseResponseHandler = function(apiResponse){
 	// console.log(apiResponse.results)
 	var billsArray = apiResponse.results,
 		htmlString = '<h1>House Bills</h1>' + billsToHTML(billsArray)
+		
 	houseColumn.innerHTML = htmlString
 }
 
@@ -76,7 +77,7 @@ handleHome: function(){
 	initalize: function (){
 		Backbone.history.start()
 	},
-	
+
 	handleSearch = function (term){
 		fetchHouseBills (term)
 		fetchSenateBills (term)
